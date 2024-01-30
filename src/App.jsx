@@ -2,9 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Dialog } from 'primereact/dialog';
+import { Button } from 'primereact/button';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [state, setState] = useState(false)
 
   return (
     <>
@@ -12,6 +14,11 @@ function App() {
 
         <h1>Hello Binash )</h1>
 
+        <Dialog visible={state} onHide={() => setState(false)}>
+           ewfwewefwef
+        </Dialog>
+
+        <Button label="Show" onClick={() => setState(true)} />
     </>
   )
 }
