@@ -1,0 +1,23 @@
+.logo{
+    min-width: 2.9375rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo__name{
+    color: #F6C517;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.logo_additional{
+    color: #FDFDFD;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 110%; 
+}
