@@ -5,21 +5,15 @@ import './App.css'
 import Header from "./Header/Header.jsx";
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
+import DevicesList from "./components/devices/DevicesList.jsx";
 
 function App() {
   const [state, setState] = useState(false)
 
   return (
     <>
-        <Header/>
-
-        <h1>Hello Binash )</h1>
-
-        <Dialog visible={state} onHide={() => setState(false)}>
-           ewfwewefwef
-        </Dialog>
-
-        <Button label="Show" onClick={() => setState(true)} />
+        {/*<Header/>*/}
+        <DevicesList />
     </>
   )
 }
