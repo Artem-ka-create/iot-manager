@@ -46,8 +46,9 @@
 }
 
 .temperature__item__data__type{
+    margin-left: 0.625rem;
     color: #898787;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 1.75rem;
     font-style: normal;
     font-weight: 400;
