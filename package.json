@@ -13,6 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "amqplib": "^0.10.3",
     "primeicons": "^6.0.1",
     "primereact": "^10.3.3",
     "react": "^18.2.0",
