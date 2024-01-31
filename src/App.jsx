@@ -35,7 +35,7 @@ function App() {
     <>
         {/*<Header/>*/}
         <Header onPageChange={handleOnPageChange} page={page}/>
-        <DevicesList />
+        {/*<DevicesList />*/}
 
         <Dashboard onPayload={handlePayload} data={receivedData}/>
 
