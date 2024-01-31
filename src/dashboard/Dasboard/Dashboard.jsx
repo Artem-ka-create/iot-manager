@@ -8,7 +8,7 @@ function Dashboard({onPayload, data}) {
 
 
   return (
-    <div className={styles.dashboard}>
+    <div>
       <div className={styles.dashboard__title}>Statistic</div>
 
         <div className={styles.dashboard__content}>

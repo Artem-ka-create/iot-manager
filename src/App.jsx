@@ -35,9 +35,12 @@ function App() {
     <>
         {/*<Header/>*/}
         <Header onPageChange={handleOnPageChange} page={page}/>
-        {/*<DevicesList />*/}
+        <div className="view__container">
+            {/*<DevicesList />*/}
+            <Dashboard onPayload={handlePayload} data={receivedData}/>
 
-        <Dashboard onPayload={handlePayload} data={receivedData}/>
+        </div>
+
 
 
     </>
