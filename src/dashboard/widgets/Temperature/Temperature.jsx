@@ -1,9 +1,12 @@
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 import styles from './Temperature.module.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBell, faHome, faLaptop, faSignOut} from '@fortawesome/free-solid-svg-icons'
 
 function Temperature({data}) {
+
+
+
 
 
   return (
@@ -12,7 +15,7 @@ function Temperature({data}) {
       <div className={styles.temperature__item}>
         <div className={styles.temperature__item__label}>Temperature Inside:</div>
         <div className={styles.temperature__item__data}>
-          <div className={styles.temperature__item__data__value}>36</div>
+          <div className={styles.temperature__item__data__value}>{data}</div>
           <div className={styles.temperature__item__data__type}>°C</div>
         </div>
       </div>

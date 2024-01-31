@@ -1,10 +1,15 @@
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 import styles from './Dashboard.module.css';
 import Temperature from "../widgets/Temperature/Temperature.jsx";
+import {menu_items} from "../../data/menu.js";
 
 function Dashboard({onPayload, data}) {
 
+    const [value, setValue] = useState(null)
 
+    useEffect(() => {
+        setValue(data);
+    }, [data]);
 
 
   return (
@@ -13,7 +18,7 @@ function Dashboard({onPayload, data}) {
 
         <div className={styles.dashboard__content}>
 
-            <Temperature data={data["temperature"]}/>
+            <Temperature data={value}/>
 
         </div>
 

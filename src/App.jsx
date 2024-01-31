@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -26,9 +26,23 @@ function App() {
 
     }
 
-    function handleReceivedData(){
-        setReceivedData([]); // subbscribe to broker
-    }
+
+    const [test, setTest] = useState({
+        stock1Rate: null,
+        stock2Rate: null,
+    });
+
+    useEffect(() => {
+        const eventSource = new EventSource("http://localhost:4001/rates");
+
+        eventSource.onmessage = (event) => {
+            const stockData = JSON.parse(event.data);
+            setTest({ ...stockData });
+            setReceivedData(stockData.stock1Rate)
+        };
+
+        return () => eventSource.close();
+    }, []);
 
 
   return (
